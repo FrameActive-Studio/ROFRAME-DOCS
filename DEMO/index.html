@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-DEMO" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.10.2">
+<title data-rh="true">Coin Hunt demo | RoFrame</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://frameactive-studio.github.io/ROFRAME-DOCS/DEMO/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Coin Hunt demo | RoFrame"><meta data-rh="true" name="description" content="Coin Hunt is a small integration demo for the existing RoFrame framework. Eight"><meta data-rh="true" property="og:description" content="Coin Hunt is a small integration demo for the existing RoFrame framework. Eight"><link data-rh="true" rel="canonical" href="https://frameactive-studio.github.io/ROFRAME-DOCS/DEMO/"><link data-rh="true" rel="alternate" href="https://frameactive-studio.github.io/ROFRAME-DOCS/DEMO/" hreflang="en"><link data-rh="true" rel="alternate" href="https://frameactive-studio.github.io/ROFRAME-DOCS/DEMO/" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Coin Hunt demo","item":"https://frameactive-studio.github.io/ROFRAME-DOCS/DEMO"}]}</script><link rel="stylesheet" href="/ROFRAME-DOCS/assets/css/styles.0a148d1f.css">
+<script src="/ROFRAME-DOCS/assets/js/runtime~main.2c1eda10.js" defer="defer"></script>
+<script src="/ROFRAME-DOCS/assets/js/main.534653a9.js" defer="defer"></script>
+</head>
+<body>
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/ROFRAME-DOCS/"><b class="navbar__title text--truncate">RoFrame</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/ROFRAME-DOCS/">Documentation</a><a class="navbar__item navbar__link" href="/ROFRAME-DOCS/api/">API</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ROFRAME-DOCS/"><span class="linkLabel_WmDU">Overview</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/ROFRAME-DOCS/DEVELOPMENT/"><span class="categoryLinkLabel_W154">Getting started</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/DEVELOPMENT/"><span class="linkLabel_WmDU">Development workflow</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/PACKAGING/"><span class="linkLabel_WmDU">Packaging and releases</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/ROFRAME-DOCS/DEMO/"><span class="linkLabel_WmDU">Coin Hunt demo</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/ROFRAME-DOCS/KERNEL/"><span class="categoryLinkLabel_W154">Core</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/KERNEL/"><span class="linkLabel_WmDU">Kernel</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/COMPONENTS/"><span class="linkLabel_WmDU">Components</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/NETWORKING/"><span class="linkLabel_WmDU">Networking</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/STORES/"><span class="linkLabel_WmDU">Stores</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/PERSISTENCE/"><span class="linkLabel_WmDU">Persistence</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/PLAYER_LIFECYCLE/"><span class="linkLabel_WmDU">Player lifecycle</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/UI/"><span class="linkLabel_WmDU">UI</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/CORE_UTILITIES/"><span class="linkLabel_WmDU">Core utilities</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/PLATFORM_SERVICES/"><span class="linkLabel_WmDU">Platform services</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/MODULES/"><span class="linkLabel_WmDU">Modules</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/DEVELOPER_TOOLS/"><span class="linkLabel_WmDU">Developer tools</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/ROFRAME-DOCS/CARTOON_UI/"><span class="categoryLinkLabel_W154">Optional packages and integration notes</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/CARTOON_UI/"><span class="linkLabel_WmDU">Cartoon UI</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/CAMERA/"><span class="linkLabel_WmDU">Camera (skeleton)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/ANIMATOR/"><span class="linkLabel_WmDU">Animator (skeleton)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/CARTOON_UI_AUDIT/"><span class="linkLabel_WmDU">Cartoon UI audit</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/DEMO_CORE_ISSUES/"><span class="linkLabel_WmDU">Demo Core findings</span></a></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/ROFRAME-DOCS/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Getting started</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Coin Hunt demo</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Coin Hunt demo</h1></header>
+<p>Coin Hunt is a small integration demo for the existing RoFrame framework. Eight
+gold coins sit on a 64-stud arena. Walk into a coin to collect it; it disappears
+for four seconds. The server owns rewards and profiles. Collector I unlocks after
+ten pickups, regardless of whether the double-coins feature is enabled.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="launch">Launch<a href="#launch" class="hash-link" aria-label="Direct link to Launch" title="Direct link to Launch" translate="no">​</a></h2>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#bfc7d5"><span class="token function" style="color:rgb(130, 170, 255)">npm</span><span class="token plain"> ci</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token function" style="color:rgb(130, 170, 255)">npm</span><span class="token plain"> run check</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token function" style="color:rgb(130, 170, 255)">npm</span><span class="token plain"> run build:place</span><br></div></code></pre></div></div>
+<p>Open <code>build/ROFRAME.rbxlx</code> in Studio, or run <code>npm run watch</code> and <code>npm run serve</code>
+in separate terminals and connect the Rojo plugin. Press Play, or start a local
+server with two clients. The current <code>default.project.json</code> launches Coin Hunt.
+Set <code>demoConfig.enabled</code> to <code>false</code> to return to the original Phase 8 UI example;
+the two examples are never discovered together.</p>
+<p>The HUD shows a loading message until the server confirms PlayerReady and the
+client loads its authoritative Store snapshot. Its cartoon/simulator skin uses
+bold outlines, rounded shaded buttons, native shape icons and Fredoka One text.
+Coins, total pickups and Collector I progress appear in left-side counters; the
+bottom progress bar tracks actual pickups, not a separate XP or level system.
+The round status stays visible above the world.</p>
+<p>When the replicated coin balance increases, the number makes a small 10% pop,
+briefly turns gold and settles in about 0.32 seconds. One small <code>+N</code> rises 16
+pixels and fades over 0.6 seconds. Further gains within that interval aggregate
+in the same popup and restart the bounded pulse, rather than stacking effects.
+Initial snapshots, unchanged balances and spending never trigger the animation.
+The displayed balance updates immediately from the Store, without optimistic
+rewards or per-frame React renders. Native TweenService handles interpolation;
+RoFrame Cleanup cancels/destroys replaced or unmounted tweens and connections.</p>
+<p>The main menu opens after loading. <strong>Play</strong> closes it. Press <strong>M</strong>, <strong>D-pad Up</strong>,
+or <strong>Menu [M]</strong> to open it again. M and the HUD button toggle it; D-pad Up passes
+through for native GUI navigation while a window is open. B closes the top
+window through CartoonModal&#x27;s back-input policy; Escape follows the same policy
+when Roblox dispatches it to the game. Input passes through while typing.
+The sidebar opens Collection, Settings, Admin and Help directly. The counters&#x27;
+plus buttons open Collection; they do not purchase or grant currency.</p>
+<p>Collection borrows the card-grid/detail-pane layout of an inventory, but displays
+only real demo milestones at 1, 5, 10 and 25 lifetime pickups. It adds no pets,
+items, equip/merge actions or rewards. Only Collector I is a persisted achievement
+and waits for the server&#x27;s <code>collectorUnlocked</code> flag; other cards are a progress
+journal. Selecting a card updates the detail pane.</p>
+<p>Settings can mute future pickup/achievement SFX and disable pickup popups.
+Achievement and command/error notifications remain visible. Settings are local
+to the session, not saved. Empty audio asset placeholders still remain silent.
+The menu does not pause gameplay; the Admin window&#x27;s server pause action retains
+the existing server permission checks. Close any window with its X or backdrop.</p>
+<p>Common presentation now comes from the optional <code>@frameactive-studio/cartoon-ui</code> public API.
+DemoController mounts CartoonThemeProvider and CartoonToastProvider through the
+existing UIController. Core UIRouter, useStore, NotificationCenter and RoFrame
+Input/Audio still own their existing responsibilities. The provider also themes
+neutral Core TextInput. Demo-specific layouts, milestone selection, switches and
+coin-gain effects remain in <code>demo/client/ui</code>; its duplicated <code>cartoon.tsx</code> is
+removed. Viewport events fit modals safely, including title/shadow overhang;
+narrow HUDs retain the logo/menu relocation. There is no polling, new asset
+dependency, extra queue or additional Remote.</p>
+<p><code>demo/client/bootstrap.ts</code> registers the inert Cartoon UI manifest before startup.
+<code>demoConfig.cartoonUIEnabled</code> controls both activation and the Controller mount;
+setting it false runs Coin Hunt without its HUD. It does not change the module&#x27;s
+default-off behavior in other games. <code>demoConfig.enabled=false</code> still returns to
+the independent Phase 8 example. The demo server imports no Cartoon UI code.</p>
+<p>The counter&#x27;s <code>valueContent</code> slot hosts the existing gain-only effect; a balance
+decrease still does not celebrate. Toasts borrow the same three-entry Core center
+with three-second defaults/five-second achievement messages and whole-surface
+dismissal. Interactive windows now pop upward with a small overshoot, close with
+a faster downward shrink, and replay the pop when switching pages. Buttons lift
+on hover, squash on press and spring back around their centers with stable hit
+targets. Collection detail panels pop on selection; Settings knobs, progress,
+counters and toast entrances also animate. The last page remains mounted during
+exit and cannot trigger actions. The startup/error notice remains static. Modal X targets
+are now 44 px; standard counter/toast insets and TextInput styling follow the
+shared tokens. Their final alignment and native focus still need Studio review.
+Windows select a control automatically only with controller preferred input.
+Closing the final demo window clears GUI selection instead of returning to a HUD
+button, so movement input returns to the character. Switching from controller to
+keyboard also releases selection inside an open window; this does not change
+the native handling of text fields.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="architecture-and-exercised-systems">Architecture and exercised systems<a href="#architecture-and-exercised-systems" class="hash-link" aria-label="Direct link to Architecture and exercised systems" title="Direct link to Architecture and exercised systems" translate="no">​</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Boundary</th><th>Responsibility</th><th>RoFrame systems</th></tr></thead><tbody><tr><td><code>demo/server/bootstrap.ts</code></td><td>Configure persistence before discovery</td><td>bootstrap, mock/native persistence, Studio diagnostics</td></tr><tr><td><code>DemoProfileService</code></td><td>Record joins, gate readiness, own current Character resources</td><td>Service lifecycle, Player/Character lifecycle, Cleanup</td></tr><tr><td><code>CoinService</code></td><td>Build the map, validate and claim coins, reward and respawn</td><td>DI, Store Actions, Signals, Scheduler, StateMachine, Assets, Prefabs</td></tr><tr><td><code>CoinComponent</code></td><td>Observe native <code>Touched</code> on tagged coins</td><td>Components, CollectionService, component Cleanup</td></tr><tr><td><code>DemoPlatformService</code></td><td>Validate/authorize commands, unlock achievement, emit analytics</td><td>DI, Permissions, Commands, Badges, Analytics, structured hooks</td></tr><tr><td><code>DemoController</code> / <code>DemoHUD</code></td><td>Loading, counts, notifications, panel and audio</td><td>Controllers, UIController, React-Lua, useStore, Theme, Router, Input, Audio, Localization</td></tr><tr><td>shared definitions</td><td>Typed protocol, persistent profile, local feature flag</td><td>Networking, Stores, owner-only replication, FeatureFlags</td></tr></tbody></table>
+<p>Gameplay is isolated under <code>demo/src/demo</code>. Core remains in <code>packages/core/src/core</code>.
+The regular client/server entrypoints select the discovery root. Demo server
+modules map exclusively to <code>ServerScriptService.Demo</code>; client modules map to
+<code>StarterPlayerScripts.Demo</code>. Only shared definitions and non-sensitive config
+map to <code>ReplicatedStorage.Demo</code>. The reusable UIController is registered by its
+import, without discovering the old example Controller.</p>
+<p>Collection has no client request: native server touch events identify the
+Player, and the server checks the ready profile, the current living Character,
+the touched Character, an active registered coin, distance &lt;= 6 studs, and
+Running state. A synchronous slot claim prevents two touches from awarding the
+same spawn. Respawn reuses that Part; no per-frame animation, loop, pool or new
+Remote is needed. Distance validation is not a full movement anti-cheat.</p>
+<p>The round follows <code>Loading → Ready → Running</code>; an authorized panel action can
+switch <code>Running ↔ Paused</code>. Paused rounds award nothing. Existing respawn timers
+may still reveal coins during a pause, but collection stays disabled.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="profile-and-readiness">Profile and readiness<a href="#profile-and-readiness" class="hash-link" aria-label="Direct link to Profile and readiness" title="Direct link to Profile and readiness" translate="no">​</a></h2>
+<p><code>RoFrameCoinHunt</code> is player-scoped and persistent, version 1. Defaults are
+<code>coins=0</code>, <code>totalCollected=0</code>, <code>joins=0</code>, <code>collectorUnlocked=false</code>. Actions are
+the only demo mutation path; persisted counters have bounded integer validation.
+Future versions add sequential migrations in <code>profile-options.ts</code>.</p>
+<p><code>joins</code> increments on ProfileLoaded and is never replicated. Coins, total
+pickups and achievement status replicate only to the owner. A client&#x27;s local
+state factory has <code>joins=0</code>, which is a default, not the server&#x27;s private value.
+Admin setcoins changes spendable coins only, not lifetime pickups or achievements.</p>
+<p>PlayerLifecycle loads the profile before PlayerReady. Load failures retain the
+existing Core logging/retry/kick path. Current Character references and the Died
+connection are replaced on each CharacterReady and released on removal/reset.</p>
+<p>The client registers notification and readiness listeners before sending
+<code>HUDReady()</code>. The server replies with <code>SessionReady()</code> either immediately if the
+Player is ready, or from PlayerReady if the client arrived first. It sends no
+currency values; the client then loads the Stores. A one-shot 30-second timeout
+shows a retry message without polling; a later successful handshake can recover.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="networking-commands-and-permissions">Networking, commands and permissions<a href="#networking-commands-and-permissions" class="hash-link" aria-label="Direct link to Networking, commands and permissions" title="Direct link to Networking, commands and permissions" translate="no">​</a></h2>
+<p>The demo adds one RoFrame network (one RemoteEvent and one RemoteFunction).
+Store replication continues to use the existing separate shared Store network.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Client message</th><th>Runtime validation</th><th>Rate limit</th><th>Authority</th></tr></thead><tbody><tr><td><code>HUDReady</code></td><td>exact empty tuple</td><td>2 / 5 seconds</td><td>only the actual remote caller&#x27;s readiness</td></tr><tr><td><code>SetCoins</code></td><td>username 1–20 chars, integer amount 0–1,000,000</td><td>3 / 5 seconds</td><td>ready actor, server Command permission, exact online target with ready profile</td></tr><tr><td><code>SetPaused</code></td><td>exact boolean tuple</td><td>3 / 5 seconds</td><td>ready actor, server Command permission</td></tr></tbody></table>
+<p>Every client boundary validates even though the UI is typed and checks values
+locally. Currency and rewards never arrive as a client Store patch.</p>
+<p>Open <strong>Admin</strong> in the sidebar, enter an exact username and amount, then press <strong>Run /setcoins</strong>.
+This invokes the RoFrame <code>SetCoins</code> command through typed Networking; <code>/setcoins</code>
+is the familiar panel label, not a chat slash-command parser. Pause/resume uses
+the same Command registry. Both successes and denials are audited server-side.</p>
+<p><code>demo/server/server-config.ts</code> keeps permissions server-only. The place&#x27;s user
+owner and explicitly configured <code>adminUserIds</code> receive <code>demo.admin</code>. In Studio,
+the configured test ID <code>-1</code> (normally Player1) also receives it; Player2 does not.
+Solo Play uses your real user ID, so add it to the server allowlist if the place
+has no user owner. Check the actual local test IDs if Studio assigns other IDs.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="development-adapters-and-configuration">Development adapters and configuration<a href="#development-adapters-and-configuration" class="hash-link" aria-label="Direct link to Development adapters and configuration" title="Direct link to Development adapters and configuration" translate="no">​</a></h2>
+<p>The default backend is <strong>mock</strong>, including outside Studio, so launching this
+validation demo cannot accidentally write real user data. Mock records survive
+release/reload in the same running server and reset when that server ends.
+Stopping Play and restarting is not a durable persistence test.</p>
+<p>To test persistence across separate servers/restarts, intentionally change
+<code>demoServerConfig.persistence</code> to <code>&quot;datastore&quot;</code>, publish a dedicated test place,
+and enable Studio API access when testing that backend in Studio. The demo uses
+the separate <code>RoFrameCoinHuntDemo</code> DataStore and <code>demo:</code> key prefix through Core;
+there is no direct DataStoreService use in demo code. Core owns autosave,
+PlayerRemoving release and BindToClose. No demo shutdown callback competes with it.</p>
+<p><code>demoConfig.doubleCoins</code> sets the server&#x27;s <code>DemoDoubleCoins</code> feature flag: false
+awards 1, true awards 2. Editing the client&#x27;s flag cannot change server rewards.</p>
+<p>Without a supplied <code>collectorBadgeId</code>, a demo-only injected BadgePlatform uses
+a synthetic positive ID inside the real RoFrame BadgeManager. It never calls
+BadgeService with that ID. The profile persists the one-time achievement flag.
+Supply a badge owned by the test experience to use the native wrapper instead.
+Failed awards are logged and may retry on a later pickup/rejoin; concurrent
+pickups share one pending award per Player.</p>
+<p>Analytics emits <code>demo_session_ready</code>, <code>demo_coin_collected</code>, and
+<code>demo_achievement_unlocked</code> through the existing wrapper. The default injected
+adapter logs locally. Set <code>nativeAnalytics=true</code> only when testing native
+analytics in a suitable published experience.</p>
+<p>Sound IDs are centralized in <code>demo-config.ts</code> / <code>demo/shared/assets.ts</code>.
+The supplied empty values are explicit <strong>silent placeholders</strong>. Configure audio
+assets permitted for your experience to hear pickup/achievement audio through
+RoFrame Audio. Finished Sounds are destroyed; an eight-second deadline also
+cleans failed loads. No invalid placeholder ID is requested. The Coin model is
+a server-local native Part template registered as <code>Models.Coin</code> and spawned via
+RoFrame Prefabs.</p>
+<p>All visible text uses Localization keys, including the five required demo
+keys. English fallbacks work without a published LocalizationTable; native
+translator/table integration is left to the test experience&#x27;s configuration.</p>
+<p>Cross-server Messaging/MemoryStore usage is omitted: the local demo has no
+shared milestone that warrants external requests or quotas. Camera, gameplay
+modules, pooling and movement anti-cheat are also outside this small demo.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="logging-diagnostics-and-cleanup">Logging, diagnostics and cleanup<a href="#logging-diagnostics-and-cleanup" class="hash-link" aria-label="Direct link to Logging, diagnostics and cleanup" title="Direct link to Logging, diagnostics and cleanup" translate="no">​</a></h2>
+<p>Core has no public general Logger. The demo&#x27;s small structured sink connects
+Networking, Persistence, Platform and Command audit hooks, and logs lifecycle,
+collections and achievement events. See <code>DEMO_CORE_ISSUES.md</code> for the verified
+Core API gap and the Player Instance scope fix. No Core logger was added.</p>
+<p>DeveloperTools activate only in Studio. Snapshots are server/client-local and do
+not expose private Store state by default. No diagnostics are sent to clients.</p>
+<p>Cleanup owns component touch listeners, Character Died connections, lifecycle
+signals, network registrations, notification timers, input bindings, the React
+mount, Router, audio, round and coin respawn tasks. No demo polling exists.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="automated-validation-and-limitations">Automated validation and limitations<a href="#automated-validation-and-limitations" class="hash-link" aria-label="Direct link to Automated validation and limitations" title="Direct link to Automated validation and limitations" translate="no">​</a></h2>
+<p><code>npm run check</code> runs lint, strict source/test typecheck, roblox-ts compilation,
+all Node tests and the Rojo sourcemap. <code>npm run build:place</code> produces the place.
+<code>npm ci</code>, <code>npm ls --depth=0</code> and <code>git diff --check</code> are also validation requirements.</p>
+<p><code>tests/demo.test.ts</code> uses the exact demo Store options and Command registrations
+with the real RoFrame registry/persistence/replication policies and mock ports.
+It checks actions/bounds, mock save/release/reload, owner-only replication,
+private fields, corrupt data rejection, rewards/features, achievement threshold,
+server collection gates, state flow and admin denials before mutation.
+<code>demo-types.test.ts</code> verifies compile-time names, directions and payloads.
+The Store regression test distinguishes Instance Players from table adapters.
+<code>demo-ui-activation.test.ts</code> covers module registration/configuration before
+startup, disabled UI gating and the actual M/Up input handler using injected ports.
+Module tests cover the shared progress/safe-fitting logic and all demo window
+dimensions; demo-specific tests retain HUD scale, milestone flags and gain rules.</p>
+<p>Node integration tests do not prove native physics touches, React rendering,
+Studio multiplayer, gamepad/mobile input, badge delivery or native DataStore
+behavior. These require the manual tests below. No Studio multiplayer execution
+is claimed by this document.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="manual-multiplayer-smoke-test">Manual multiplayer smoke test<a href="#manual-multiplayer-smoke-test" class="hash-link" aria-label="Direct link to Manual multiplayer smoke test" title="Direct link to Manual multiplayer smoke test" translate="no">​</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Step</th><th>Action</th><th>Expected result</th></tr></thead><tbody><tr><td>1</td><td>Build/sync; Studio Test → local server with <strong>2 clients</strong>.</td><td>One arena, eight tagged gold coins, one Coin Hunt HUD per client; old Phase 8 panel absent.</td></tr><tr><td>2</td><td>Wait for both players.</td><td>Server logs profile_loaded/character_ready; each client changes Loading to counts after its SessionReady/Store load.</td></tr><tr><td>3</td><td>Walk each player into different coins.</td><td>Each pickup adds 1 coin and 1 total, produces a notification only for that player, and hides that coin for four seconds.</td></tr><tr><td>4</td><td>Collect again and observe both HUDs.</td><td>Only the collector&#x27;s player Store changes; counts are read through replicated Stores.</td></tr><tr><td>5</td><td>Inspect client Store snapshots and try reading the other player key through the Store Snapshot request.</td><td>No server joins value is sent; another player&#x27;s snapshot is rejected with STORE_REPLICATION_DENIED.</td></tr><tr><td>6</td><td>Run both players into the same visible coin together; keep touching its position while hidden.</td><td>One reward per spawn, no reward during the four-second cooldown.</td></tr><tr><td>7</td><td>M / D-pad Up / HUD button opens the panel; use Run /setcoins on Player1 and Player2.</td><td>Configured admin succeeds; non-admin is denied and audited. Negative/fractional/over-limit amounts fail. Lifetime total does not change.</td></tr><tr><td>8</td><td>Collect ten pickups, then more.</td><td>Collector I unlocks once; profile flag persists. Default badge is explicitly a mock, with no external badge call.</td></tr><tr><td>9</td><td>Leave and rejoin the same still-running server with the same user ID, where the Studio test setup supports it.</td><td>Mock profile reloads saved coins, total and achievement; joins increments. If restarting the server, expect a mock reset instead.</td></tr><tr><td>10</td><td>For durable rejoin/restart, opt into the dedicated datastore backend in a published test place.</td><td>Saved values reload on a later server; verify this separately from mock behavior.</td></tr><tr><td>11</td><td>Reset each Character, then collect coins again.</td><td>New CharacterReady flow, one active handler path, no duplicate pickup/achievement notifications.</td></tr><tr><td>12</td><td>Shut down the server after changing coins.</td><td>Core saves/releases loaded profiles without persistence errors; mock release is covered automatically, native saving requires the opted-in backend.</td></tr><tr><td>13</td><td>Admin pauses, touches a visible coin, then resumes.</td><td>Paused state replicates to both HUDs; no reward while paused; collection resumes afterward.</td></tr><tr><td>14</td><td>Restart with doubleCoins=true.</td><td>Pickup adds 2 spendable coins but only 1 lifetime pickup.</td></tr><tr><td>15</td><td>Configure permitted audio IDs, then collect/earn achievement.</td><td>Correct sound plays; no orphaned Sound remains after completion/deadline.</td></tr></tbody></table>
+<p>Additional UI smoke checks: navigate through all four menu pages, select every
+Collection card, toggle both Settings switches, and resize/emulate portrait and
+landscape devices. Check that windows fit, large counters remain legible, and
+the menu does not hide Roblox&#x27;s top bar. Verify mouse, touch and gamepad activation
+in Studio; automated layout tests do not prove native rendering or input behavior.
+Inspect the .28-second Back Out entrances, .16-second exits and backdrop fade.
+Close and reopen rapidly, switch pages while animating, select each milestone and
+toggle Settings repeatedly. There should be one window/focus owner, the latest
+controlled target, full borders/shadows and no action firing during exit. Check
+that hovering/pressing near a button edge does not cancel the click as it scales.
+Compare the module version against the source audit in <code>CARTOON_UI_AUDIT.md</code>:
+check counter labels/plus actions, selected tile borders, switch knobs, window
+body clipping, the X and toast positions. Navigate Up inside an open window,
+close with B, and check that GUI selection clears and character movement resumes.
+Repeat opening/closing with M, Play, X and backdrop on keyboard: WASD must move
+the character rather than select HUD buttons. With a dialog open, switch from
+controller to keyboard and back; check both selection release and reacquisition.
+Type in Admin before M/B/Escape; text input
+must keep its native handling. Inspect loading/error states without a dimmer or X.
+Start once with cartoonUIEnabled=false: no HUD, modal input action or toast
+viewport should appear; restore it before the normal multiplayer tests.
+For the coin feedback, collect one coin, enable doubleCoins in a separate run,
+then collect several coins quickly. Expect accurate <code>+1</code>/<code>+2</code> or aggregated
+gains, only one popup and a return to the normal white number/scale. Loading a
+saved balance or reducing coins through Admin must not celebrate a gain.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="file-inventory">File inventory<a href="#file-inventory" class="hash-link" aria-label="Direct link to File inventory" title="Direct link to File inventory" translate="no">​</a></h2>
+<p>Created:</p>
+<ul>
+<li class=""><code>demo/src/demo/config/demo-config.ts</code></li>
+<li class=""><code>demo/src/demo/shared/{assets,locale,log,network,network-contracts,profile-options,round,rules,stores}.ts</code></li>
+<li class=""><code>demo/src/demo/server/{admin,bootstrap,map,server-config}.ts</code></li>
+<li class=""><code>demo/src/demo/server/services/{coin-service,demo-platform-service,demo-profile-service}.ts</code></li>
+<li class=""><code>demo/src/demo/server/components/coin-component.ts</code></li>
+<li class=""><code>demo/src/demo/client/bootstrap.ts</code>, <code>demo/src/demo/client/session.ts</code></li>
+<li class=""><code>demo/src/demo/client/controllers/demo-controller.tsx</code>, <code>demo/src/demo/client/ui/demo-hud.tsx</code></li>
+<li class=""><code>demo/src/demo/client/ui/{demo-windows,animated-coin-value}.tsx</code>, <code>demo/src/demo/client/ui/{ui-model,coin-gain}.ts</code></li>
+<li class=""><code>tests/demo-ui.test.ts</code> (authoritative milestone flag and HUD scale)</li>
+<li class=""><code>tests/demo-ui-activation.test.ts</code> (module/UI activation and input integration)</li>
+<li class=""><code>tests/demo.test.ts</code>, <code>tests/demo-types.test.ts</code></li>
+<li class=""><code>docs/DEMO.md</code>, <code>docs/DEMO_CORE_ISSUES.md</code></li>
+</ul>
+<p>Modified for this task:</p>
+<ul>
+<li class=""><code>default.project.json</code>: side-specific demo mappings</li>
+<li class=""><code>demo/src/server/index.server.ts</code>, <code>demo/src/client/index.client.ts</code>: demo selection</li>
+<li class=""><code>packages/core/src/core/store-registry.ts</code>: native Player scope recognition</li>
+<li class=""><code>tests/store.test.ts</code>: native Player regression</li>
+<li class=""><code>tests/roblox-polyfill.ts</code>, <code>tests/roblox-globals.d.ts</code>, <code>tests/component.test.ts</code>: Instance-aware test support</li>
+<li class=""><code>tests/foundation.test.ts</code>: demo server/shared boundary checks</li>
+<li class=""><code>README.md</code>, <code>docs/DEVELOPMENT.md</code>, <code>docs/UI.md</code>, <code>tests/README.md</code>: launch/test documentation</li>
+</ul>
+<p>Cartoon UI Phase G replaces the old <code>demo/src/demo/client/ui/cartoon.tsx</code> with public
+module imports. See <code>CARTOON_UI.md</code> for the migration and remaining native checks.</p></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/ROFRAME-DOCS/PACKAGING/"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Packaging and releases</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/ROFRAME-DOCS/KERNEL/"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Kernel</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#launch" class="table-of-contents__link toc-highlight">Launch</a></li><li><a href="#architecture-and-exercised-systems" class="table-of-contents__link toc-highlight">Architecture and exercised systems</a></li><li><a href="#profile-and-readiness" class="table-of-contents__link toc-highlight">Profile and readiness</a></li><li><a href="#networking-commands-and-permissions" class="table-of-contents__link toc-highlight">Networking, commands and permissions</a></li><li><a href="#development-adapters-and-configuration" class="table-of-contents__link toc-highlight">Development adapters and configuration</a></li><li><a href="#logging-diagnostics-and-cleanup" class="table-of-contents__link toc-highlight">Logging, diagnostics and cleanup</a></li><li><a href="#automated-validation-and-limitations" class="table-of-contents__link toc-highlight">Automated validation and limitations</a></li><li><a href="#manual-multiplayer-smoke-test" class="table-of-contents__link toc-highlight">Manual multiplayer smoke test</a></li><li><a href="#file-inventory" class="table-of-contents__link toc-highlight">File inventory</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">RoFrame — TypeScript-first Roblox framework</div></div></div></footer></div>
+</body>
+</html>

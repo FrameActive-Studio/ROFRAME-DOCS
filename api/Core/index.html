@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-api/Core/index" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.10.2">
+<title data-rh="true">Core | RoFrame</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://frameactive-studio.github.io/ROFRAME-DOCS/api/Core/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Core | RoFrame"><meta data-rh="true" name="description" content="Server-safe framework API. React presentation is available from @frameactive-studio/core/ui."><meta data-rh="true" property="og:description" content="Server-safe framework API. React presentation is available from @frameactive-studio/core/ui."><link data-rh="true" rel="canonical" href="https://frameactive-studio.github.io/ROFRAME-DOCS/api/Core/"><link data-rh="true" rel="alternate" href="https://frameactive-studio.github.io/ROFRAME-DOCS/api/Core/" hreflang="en"><link data-rh="true" rel="alternate" href="https://frameactive-studio.github.io/ROFRAME-DOCS/api/Core/" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Core","item":"https://frameactive-studio.github.io/ROFRAME-DOCS/api/Core/"}]}</script><link rel="stylesheet" href="/ROFRAME-DOCS/assets/css/styles.0a148d1f.css">
+<script src="/ROFRAME-DOCS/assets/js/runtime~main.2c1eda10.js" defer="defer"></script>
+<script src="/ROFRAME-DOCS/assets/js/main.534653a9.js" defer="defer"></script>
+</head>
+<body>
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/ROFRAME-DOCS/"><b class="navbar__title text--truncate">RoFrame</b></a><a class="navbar__item navbar__link" href="/ROFRAME-DOCS/">Documentation</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/ROFRAME-DOCS/api/">API</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ROFRAME-DOCS/api/"><span class="linkLabel_WmDU">API overview</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible menu__list-item-collapsible--active"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--active" aria-current="page" href="/ROFRAME-DOCS/api/Core/"><span class="categoryLinkLabel_W154">Core</span></a><button aria-label="Collapse sidebar category &#x27;Core&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul class="menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/ROFRAME-DOCS/api/Core/classes/Analytics/"><span class="categoryLinkLabel_W154">Classes</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/ROFRAME-DOCS/api/Core/interfaces/AnalyticsCustomEvent/"><span class="categoryLinkLabel_W154">Interfaces</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/ROFRAME-DOCS/api/Core/type-aliases/AssetReference/"><span class="categoryLinkLabel_W154">Type Aliases</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/ROFRAME-DOCS/api/Core/variables/PlayerLifecycle/"><span class="categoryLinkLabel_W154">Variables</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/ROFRAME-DOCS/api/Core/functions/Component/"><span class="categoryLinkLabel_W154">Functions</span></a></div></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/ROFRAME-DOCS/api/UI/"><span class="categoryLinkLabel_W154">UI</span></a><button aria-label="Expand sidebar category &#x27;UI&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/ROFRAME-DOCS/api/CartoonUI/"><span class="categoryLinkLabel_W154">CartoonUI</span></a><button aria-label="Expand sidebar category &#x27;CartoonUI&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/ROFRAME-DOCS/api/Camera/"><span class="categoryLinkLabel_W154">Camera</span></a><button aria-label="Expand sidebar category &#x27;Camera&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/ROFRAME-DOCS/api/Animator/"><span class="categoryLinkLabel_W154">Animator</span></a><button aria-label="Expand sidebar category &#x27;Animator&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/ROFRAME-DOCS/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Core</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Core</h1></header>
+<p>Server-safe framework API. React presentation is available from @frameactive-studio/core/ui.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="classes">Classes<a href="#classes" class="hash-link" aria-label="Direct link to Classes" title="Direct link to Classes" translate="no">​</a></h2>
+<ul>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/Analytics/">Analytics</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/AssetRegistry/">AssetRegistry</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/AudioHandle/">AudioHandle</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/AudioManager/">AudioManager</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/BadgeManager/">BadgeManager</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/CircularDependencyError/">CircularDependencyError</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/Cleanup/">Cleanup</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/CommandRegistry/">CommandRegistry</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/ComponentAttributeError/">ComponentAttributeError</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/ComponentAttributes/">ComponentAttributes</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/ComponentLifecycleError/">ComponentLifecycleError</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/CoreUtilityError/">CoreUtilityError</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/CrossServerMessaging/">CrossServerMessaging</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/DeveloperTools/">DeveloperTools</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/DiscoveryError/">DiscoveryError</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/DuplicateComponentError/">DuplicateComponentError</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/DuplicateSystemError/">DuplicateSystemError</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/EntityRegistry/">EntityRegistry</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/Environment/">Environment</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/FeatureFlags/">FeatureFlags</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/InputManager/">InputManager</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/KernelError/">KernelError</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/LifecycleError/">LifecycleError</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/Localization/">Localization</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/MemoryStore/">MemoryStore</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/MissingDependencyError/">MissingDependencyError</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/MockPersistenceAdapterFactory/">MockPersistenceAdapterFactory</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/ModuleError/">ModuleError</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/ModuleLifecycleError/">ModuleLifecycleError</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/ModuleManager/">ModuleManager</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/ModuleRegistry/">ModuleRegistry</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/NetworkError/">NetworkError</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/NotificationCenter/">NotificationCenter</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/ObjectPool/">ObjectPool</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/PermissionService/">PermissionService</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/PersistenceError/">PersistenceError</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/PlatformReporter/">PlatformReporter</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/PlatformServiceError/">PlatformServiceError</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/PlayerLifecycleError/">PlayerLifecycleError</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/PlayerLifecycleManager/">PlayerLifecycleManager</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/PrefabRegistry/">PrefabRegistry</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/Profiler/">Profiler</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/RobloxDataStoreAdapterFactory/">RobloxDataStoreAdapterFactory</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/Scheduler/">Scheduler</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/Signal/">Signal</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/StateMachine/">StateMachine</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/StoreError/">StoreError</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/TypedMemoryHashMap/">TypedMemoryHashMap</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/TypedMemoryQueue/">TypedMemoryQueue</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/TypedMemorySortedMap/">TypedMemorySortedMap</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/classes/UIRouter/">UIRouter</a></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="interfaces">Interfaces<a href="#interfaces" class="hash-link" aria-label="Direct link to Interfaces" title="Direct link to Interfaces" translate="no">​</a></h2>
+<ul>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/AnalyticsCustomEvent/">AnalyticsCustomEvent</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/AnalyticsEconomyEvent/">AnalyticsEconomyEvent</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/AnalyticsFunnelEvent/">AnalyticsFunnelEvent</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/AnalyticsOptions/">AnalyticsOptions</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/AnalyticsPlatform/">AnalyticsPlatform</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/AnalyticsProgressionEvent/">AnalyticsProgressionEvent</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/AssetPreloader/">AssetPreloader</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/AudioDefinition/">AudioDefinition</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/AudioPlatform/">AudioPlatform</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/AudioPlayback/">AudioPlayback</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/BadgeOptions/">BadgeOptions</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/BadgePlatform/">BadgePlatform</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/CommandAuditEntry/">CommandAuditEntry</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/CommandContext/">CommandContext</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/CommandOptions/">CommandOptions</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/CommandRegistration/">CommandRegistration</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/ComponentContext/">ComponentContext</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/ComponentDefinition/">ComponentDefinition</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/ComponentOptions/">ComponentOptions</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/CrossServerConnection/">CrossServerConnection</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/CrossServerMessagingOptions/">CrossServerMessagingOptions</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/CrossServerMessagingPlatform/">CrossServerMessagingPlatform</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/CrossServerNativeConnection/">CrossServerNativeConnection</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/DefineModuleOptions/">DefineModuleOptions</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/DefineStoreOptions/">DefineStoreOptions</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/DependencyEdgeDiagnostic/">DependencyEdgeDiagnostic</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/DependencyGraphDiagnostic/">DependencyGraphDiagnostic</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/DependencyIssueDiagnostic/">DependencyIssueDiagnostic</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/DependencyNodeDiagnostic/">DependencyNodeDiagnostic</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/DeveloperSnapshotOptions/">DeveloperSnapshotOptions</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/DeveloperToolsOptions/">DeveloperToolsOptions</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/DeveloperToolsSnapshot/">DeveloperToolsSnapshot</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/EntityPlatform/">EntityPlatform</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/EntityRecord/">EntityRecord</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/EnvironmentConfig/">EnvironmentConfig</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/FeatureFlagOptions/">FeatureFlagOptions</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/IncomingHandlerOptions/">IncomingHandlerOptions</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/InputActionContext/">InputActionContext</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/InputBinding/">InputBinding</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/InputPlatform/">InputPlatform</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/LifecycleTimingEntry/">LifecycleTimingEntry</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/LocalizationProvider/">LocalizationProvider</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/LocalizationTranslator/">LocalizationTranslator</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/MemoryHashMapPort/">MemoryHashMapPort</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/MemoryQueuePort/">MemoryQueuePort</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/MemoryQueueRead/">MemoryQueueRead</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/MemorySortedEntry/">MemorySortedEntry</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/MemorySortedMapPort/">MemorySortedMapPort</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/MemoryStoreBound/">MemoryStoreBound</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/MemoryStoreOptions/">MemoryStoreOptions</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/MemoryStorePlatform/">MemoryStorePlatform</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/ModuleActivation/">ModuleActivation</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/ModuleContext/">ModuleContext</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/ModuleDefinition/">ModuleDefinition</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/ModuleManifest/">ModuleManifest</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/ModuleRuntimeOptions/">ModuleRuntimeOptions</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/ModuleSource/">ModuleSource</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/NetworkClientApi/">NetworkClientApi</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/NetworkConnection/">NetworkConnection</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/NetworkContext/">NetworkContext</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/NetworkDefinition/">NetworkDefinition</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/NetworkLogEntry/">NetworkLogEntry</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/NetworkOptions/">NetworkOptions</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/NetworkRegistrationDiagnostic/">NetworkRegistrationDiagnostic</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/NetworkRegistryDiagnostic/">NetworkRegistryDiagnostic</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/NetworkServerApi/">NetworkServerApi</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/NotificationCenterOptions/">NotificationCenterOptions</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/NotificationOptions/">NotificationOptions</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/NotificationScheduler/">NotificationScheduler</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/NotificationTimer/">NotificationTimer</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/ObjectPoolOptions/">ObjectPoolOptions</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/OnComponentDestroy/">OnComponentDestroy</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/OnComponentInit/">OnComponentInit</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/OnComponentStart/">OnComponentStart</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/OnDestroy/">OnDestroy</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/OnInit/">OnInit</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/OnStart/">OnStart</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/PermissionAuthorizer/">PermissionAuthorizer</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/PermissionOptions/">PermissionOptions</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/PersistenceAdapter/">PersistenceAdapter</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/PersistenceAdapterFactory/">PersistenceAdapterFactory</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/PersistenceAutosaveOptions/">PersistenceAutosaveOptions</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/PersistenceLogEntry/">PersistenceLogEntry</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/PersistenceRetryOptions/">PersistenceRetryOptions</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/PersistenceRuntimeOptions/">PersistenceRuntimeOptions</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/PlatformLogEntry/">PlatformLogEntry</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/PlayerLifecycleConnection/">PlayerLifecycleConnection</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/PlayerLifecycleSignals/">PlayerLifecycleSignals</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/PlayerProfileProvider/">PlayerProfileProvider</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/PlayerProfileRegistrar/">PlayerProfileRegistrar</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/PlayerProfileRegistration/">PlayerProfileRegistration</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/PrefabDefinition/">PrefabDefinition</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/PrefabPlatform/">PrefabPlatform</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/PrefabPoolOptions/">PrefabPoolOptions</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/PrefabSpawnOptions/">PrefabSpawnOptions</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/ProfilerSpan/">ProfilerSpan</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/ProfileSummary/">ProfileSummary</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/RateLimit/">RateLimit</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/ScheduledTask/">ScheduledTask</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/SchedulerPlatform/">SchedulerPlatform</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/ServerStoreInstance/">ServerStoreInstance</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/SignalConnection/">SignalConnection</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/StateDefinition/">StateDefinition</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/StateMachineOptions/">StateMachineOptions</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/StoreClientApi/">StoreClientApi</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/StoreDefinition/">StoreDefinition</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/StoreDefinitionDiagnostic/">StoreDefinitionDiagnostic</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/StoreInstanceDiagnostic/">StoreInstanceDiagnostic</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/StorePersistenceOptions/">StorePersistenceOptions</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/StoreRegistryDiagnostic/">StoreRegistryDiagnostic</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/StoreSubscription/">StoreSubscription</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/StoreView/">StoreView</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/SystemOptions/">SystemOptions</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/TransitionDefinition/">TransitionDefinition</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/UINotification/">UINotification</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/ValidationFailure/">ValidationFailure</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/ValidationSuccess/">ValidationSuccess</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/interfaces/Validator/">Validator</a></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="type-aliases">Type Aliases<a href="#type-aliases" class="hash-link" aria-label="Direct link to Type Aliases" title="Direct link to Type Aliases" translate="no">​</a></h2>
+<ul>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/AssetReference/">AssetReference</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/BoundStoreActions/">BoundStoreActions</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/BoundStoreGetters/">BoundStoreGetters</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/CleanupResource/">CleanupResource</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/ClientStoreArguments/">ClientStoreArguments</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/CommandArguments/">CommandArguments</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/CommandAuditLogger/">CommandAuditLogger</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/CommandAuditStatus/">CommandAuditStatus</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/CommandKey/">CommandKey</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/CommandReturn/">CommandReturn</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/ComponentConstructor/">ComponentConstructor</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/ComponentLifecyclePhase/">ComponentLifecyclePhase</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/ContainerState/">ContainerState</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/CoreUtilityName/">CoreUtilityName</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/DependencyIssueCode/">DependencyIssueCode</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/DependencyNodeKind/">DependencyNodeKind</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/DependencyProvider/">DependencyProvider</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/InputActionHandler/">InputActionHandler</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/InputType/">InputType</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/LifecyclePhase/">LifecyclePhase</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/LifecycleResult/">LifecycleResult</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/LifecycleTimingObserver/">LifecycleTimingObserver</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/LifecycleTimingTarget/">LifecycleTimingTarget</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/LocalizationArguments/">LocalizationArguments</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/ModuleErrorCode/">ModuleErrorCode</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/ModuleLifecyclePhase/">ModuleLifecyclePhase</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/ModuleManagerState/">ModuleManagerState</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/ModuleSetting/">ModuleSetting</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/ModuleSide/">ModuleSide</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/NetworkArguments/">NetworkArguments</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/NetworkDirection/">NetworkDirection</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/NetworkKey/">NetworkKey</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/NetworkLevel/">NetworkLevel</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/NetworkLogger/">NetworkLogger</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/NetworkReturn/">NetworkReturn</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/NotificationLevel/">NotificationLevel</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/PersistenceLevel/">PersistenceLevel</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/PersistenceLogger/">PersistenceLogger</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/PersistenceMigration/">PersistenceMigration</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/PersistenceOperation/">PersistenceOperation</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/PlatformLogger/">PlatformLogger</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/PlatformLogLevel/">PlatformLogLevel</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/PlatformServiceName/">PlatformServiceName</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/PlayerLifecyclePhase/">PlayerLifecyclePhase</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/RateLimitHook/">RateLimitHook</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/RoFrameEnvironment/">RoFrameEnvironment</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/ServerStoreArguments/">ServerStoreArguments</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/StoreActionTree/">StoreActionTree</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/StoreGetterTree/">StoreGetterTree</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/StorePersistence/">StorePersistence</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/StoreScope/">StoreScope</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/StoreServerApi/">StoreServerApi</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/SystemConstructor/">SystemConstructor</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/SystemKind/">SystemKind</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/type-aliases/ValidationResult/">ValidationResult</a></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="variables">Variables<a href="#variables" class="hash-link" aria-label="Direct link to Variables" title="Direct link to Variables" translate="no">​</a></h2>
+<ul>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/variables/PlayerLifecycle/">PlayerLifecycle</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/variables/RoFrame/">RoFrame</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/variables/validators/">validators</a></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="functions">Functions<a href="#functions" class="hash-link" aria-label="Direct link to Functions" title="Direct link to Functions" translate="no">​</a></h2>
+<ul>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/functions/Component/">Component</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/functions/configurePersistence/">configurePersistence</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/functions/Controller/">Controller</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/functions/createMemoryStore/">createMemoryStore</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/functions/defineAnalytics/">defineAnalytics</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/functions/defineAssets/">defineAssets</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/functions/defineAudio/">defineAudio</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/functions/defineBadges/">defineBadges</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/functions/defineCommands/">defineCommands</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/functions/defineCrossServerMessaging/">defineCrossServerMessaging</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/functions/defineEnvironment/">defineEnvironment</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/functions/defineFeatures/">defineFeatures</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/functions/defineInput/">defineInput</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/functions/defineLocalization/">defineLocalization</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/functions/defineModule/">defineModule</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/functions/defineNetwork/">defineNetwork</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/functions/definePermissions/">definePermissions</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/functions/definePrefabs/">definePrefabs</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/functions/defineStateMachine/">defineStateMachine</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/functions/defineStore/">defineStore</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/functions/discoverModuleDefinitions/">discoverModuleDefinitions</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/functions/discoverModuleSources/">discoverModuleSources</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/functions/inspectModuleDependencies/">inspectModuleDependencies</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/functions/inspectSystemDependencies/">inspectSystemDependencies</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/functions/raiseKernelError/">raiseKernelError</a></li>
+<li class=""><a class="" href="/ROFRAME-DOCS/api/Core/functions/Service/">Service</a></li>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/ROFRAME-DOCS/api/"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">API overview</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/ROFRAME-DOCS/api/Core/classes/Analytics/"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Analytics</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#classes" class="table-of-contents__link toc-highlight">Classes</a></li><li><a href="#interfaces" class="table-of-contents__link toc-highlight">Interfaces</a></li><li><a href="#type-aliases" class="table-of-contents__link toc-highlight">Type Aliases</a></li><li><a href="#variables" class="table-of-contents__link toc-highlight">Variables</a></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">RoFrame — TypeScript-first Roblox framework</div></div></div></footer></div>
+</body>
+</html>

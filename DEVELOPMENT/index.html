@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-DEVELOPMENT" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.10.2">
+<title data-rh="true">Development workflow | RoFrame</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://frameactive-studio.github.io/ROFRAME-DOCS/DEVELOPMENT/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Development workflow | RoFrame"><meta data-rh="true" name="description" content="Boundaries"><meta data-rh="true" property="og:description" content="Boundaries"><link data-rh="true" rel="canonical" href="https://frameactive-studio.github.io/ROFRAME-DOCS/DEVELOPMENT/"><link data-rh="true" rel="alternate" href="https://frameactive-studio.github.io/ROFRAME-DOCS/DEVELOPMENT/" hreflang="en"><link data-rh="true" rel="alternate" href="https://frameactive-studio.github.io/ROFRAME-DOCS/DEVELOPMENT/" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Development workflow","item":"https://frameactive-studio.github.io/ROFRAME-DOCS/DEVELOPMENT"}]}</script><link rel="stylesheet" href="/ROFRAME-DOCS/assets/css/styles.0a148d1f.css">
+<script src="/ROFRAME-DOCS/assets/js/runtime~main.2c1eda10.js" defer="defer"></script>
+<script src="/ROFRAME-DOCS/assets/js/main.534653a9.js" defer="defer"></script>
+</head>
+<body>
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/ROFRAME-DOCS/"><b class="navbar__title text--truncate">RoFrame</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/ROFRAME-DOCS/">Documentation</a><a class="navbar__item navbar__link" href="/ROFRAME-DOCS/api/">API</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ROFRAME-DOCS/"><span class="linkLabel_WmDU">Overview</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/ROFRAME-DOCS/DEVELOPMENT/"><span class="categoryLinkLabel_W154">Getting started</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/ROFRAME-DOCS/DEVELOPMENT/"><span class="linkLabel_WmDU">Development workflow</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/PACKAGING/"><span class="linkLabel_WmDU">Packaging and releases</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/DEMO/"><span class="linkLabel_WmDU">Coin Hunt demo</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/ROFRAME-DOCS/KERNEL/"><span class="categoryLinkLabel_W154">Core</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/KERNEL/"><span class="linkLabel_WmDU">Kernel</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/COMPONENTS/"><span class="linkLabel_WmDU">Components</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/NETWORKING/"><span class="linkLabel_WmDU">Networking</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/STORES/"><span class="linkLabel_WmDU">Stores</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/PERSISTENCE/"><span class="linkLabel_WmDU">Persistence</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/PLAYER_LIFECYCLE/"><span class="linkLabel_WmDU">Player lifecycle</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/UI/"><span class="linkLabel_WmDU">UI</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/CORE_UTILITIES/"><span class="linkLabel_WmDU">Core utilities</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/PLATFORM_SERVICES/"><span class="linkLabel_WmDU">Platform services</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/MODULES/"><span class="linkLabel_WmDU">Modules</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/DEVELOPER_TOOLS/"><span class="linkLabel_WmDU">Developer tools</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/ROFRAME-DOCS/CARTOON_UI/"><span class="categoryLinkLabel_W154">Optional packages and integration notes</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/CARTOON_UI/"><span class="linkLabel_WmDU">Cartoon UI</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/CAMERA/"><span class="linkLabel_WmDU">Camera (skeleton)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/ANIMATOR/"><span class="linkLabel_WmDU">Animator (skeleton)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/CARTOON_UI_AUDIT/"><span class="linkLabel_WmDU">Cartoon UI audit</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/DEMO_CORE_ISSUES/"><span class="linkLabel_WmDU">Demo Core findings</span></a></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/ROFRAME-DOCS/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Getting started</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Development workflow</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Development workflow</h1></header>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="boundaries">Boundaries<a href="#boundaries" class="hash-link" aria-label="Direct link to Boundaries" title="Direct link to Boundaries" translate="no">​</a></h2>
+<ul>
+<li class=""><code>demo/src/client</code> may use client and shared code, but must not contain authoritative state.</li>
+<li class=""><code>demo/src/server</code> owns authoritative behavior and may use server and shared code.</li>
+<li class=""><code>demo/src/shared</code> must be safe to load in both runtimes.</li>
+<li class=""><code>packages/core/src/core</code> contains the runtime-neutral kernel and its Roblox discovery adapter.</li>
+<li class=""><code>packages/core/src/core/network*.ts</code> contains the shared Networking API, security pipeline, and native Remote adapter.</li>
+<li class=""><code>packages/core/src/core/store*.ts</code> contains the Store runtime, scope registry, and server-authoritative replication adapter.</li>
+<li class=""><code>packages/core/src/core/persistence*.ts</code> contains runtime-neutral persistence logic plus native DataStore and mock adapters.</li>
+<li class=""><code>packages/core/src/core</code> also contains the independent Phase 9 utilities and their thin Roblox-native adapters.</li>
+<li class="">Phase 10 platform services under <code>packages/core/src/core</code> are server-authoritative wrappers around Roblox services; their pure policies use injected adapters in tests.</li>
+<li class="">Phase 12 DeveloperTools are opt-in, Studio-gated, bounded, and snapshot-based. Production runtime paths receive no observers unless explicitly enabled.</li>
+<li class=""><code>demo/src/server/services</code> is the automatic discovery root for server Services.</li>
+<li class=""><code>demo/src/client/controllers</code> is the automatic discovery root for client Controllers.</li>
+<li class=""><code>demo/src/server/components</code> and <code>demo/src/client/components</code> are the runtime-specific Component discovery roots.</li>
+<li class=""><code>packages/&lt;module&gt;/src</code> owns each optional gameplay module&#x27;s manifest and server/client/shared/UI implementation. Phase 11 adds the module infrastructure but intentionally adds no gameplay module.</li>
+<li class=""><code>out</code> and <code>include</code> directories are compiler output and must never be edited manually.</li>
+</ul>
+<p>The runtime bootstraps are <code>demo/src/client/index.client.ts</code> and <code>demo/src/server/index.server.ts</code>. roblox-ts 3 requires <code>index</code> for folder entrypoints.</p>
+<p>Coin Hunt is enabled by default and selects its discovery roots under <code>demo/src/demo</code>.
+Its server/client/shared output is mapped separately by Rojo. Set
+<code>demo/src/demo/config/demo-config.ts</code>&#x27;s <code>enabled</code> to false to run the original example.
+See <a class="" href="/ROFRAME-DOCS/DEMO/"><code>DEMO.md</code></a> for the complete launch and validation instructions.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="commands">Commands<a href="#commands" class="hash-link" aria-label="Direct link to Commands" title="Direct link to Commands" translate="no">​</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Command</th><th>Purpose</th></tr></thead><tbody><tr><td><code>npm run build</code></td><td>Compile TypeScript to Luau with roblox-ts.</td></tr><tr><td><code>npm run build:place</code></td><td>Compile and create <code>build/ROFRAME.rbxlx</code>.</td></tr><tr><td><code>npm run watch</code></td><td>Recompile when TypeScript files change.</td></tr><tr><td><code>npm run serve</code></td><td>Start Rojo for Roblox Studio.</td></tr><tr><td><code>npm run docs:start</code></td><td>Serve the documentation at <code>http://localhost:3000</code> with live reload.</td></tr><tr><td><code>npm run docs:build</code></td><td>Build the documentation and validate internal links.</td></tr><tr><td><code>npm run docs:serve</code></td><td>Preview the built documentation locally.</td></tr><tr><td><code>npm run typecheck</code></td><td>Check Roblox source and Node-based tests.</td></tr><tr><td><code>npm run lint</code></td><td>Run strict ESLint rules over source and tests.</td></tr><tr><td><code>npm test</code></td><td>Run foundation, kernel, Component, Networking, Store, persistence, UI, Core utility, Platform service, Module system, DeveloperTools, and type-contract tests.</td></tr><tr><td><code>npm run check</code></td><td>Build packages/demo, lint, typecheck, test, validate graph/packs and build the Rojo place.</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="first-setup">First setup<a href="#first-setup" class="hash-link" aria-label="Direct link to First setup" title="Direct link to First setup" translate="no">​</a></h2>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#bfc7d5"><span class="token plain">rokit </span><span class="token function" style="color:rgb(130, 170, 255)">install</span><span class="token plain"></span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token function" style="color:rgb(130, 170, 255)">npm</span><span class="token plain"> ci</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">rojo plugin </span><span class="token function" style="color:rgb(130, 170, 255)">install</span><br></div></code></pre></div></div>
+<p>For day-to-day development, keep <code>npm run watch</code> and <code>npm run serve</code> running in separate terminals, then connect the Rojo plugin in Roblox Studio.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="documentation-website">Documentation website<a href="#documentation-website" class="hash-link" aria-label="Direct link to Documentation website" title="Direct link to Documentation website" translate="no">​</a></h2>
+<p>The Docusaurus configuration lives in <code>website/</code> and reads the existing Markdown
+files directly from <code>docs/</code>. The sidebar in <code>website/sidebars.js</code> follows the
+groups, labels and order in <code>docs/index.md</code>, which is also the home page. Add new
+documents to both the sidebar and the overview. Use relative Markdown links
+(for example, <code>[Kernel](KERNEL.md)</code>) so links work both in the repository and on
+the website. <code>.md</code> files use standard Markdown; use <code>.mdx</code> for embedded React.</p>
+<p>Run <code>npm run docs:start</code> while editing. For a production preview, run
+<code>npm run docs:build</code> followed by <code>npm run docs:serve</code>. The build fails on broken
+internal links, and CI builds the documentation alongside framework validation.
+For deployment, set <code>DOCS_URL</code> to the public origin and <code>DOCS_BASE_URL</code> to the
+hosting path (default <code>/</code>, with leading and trailing slashes).</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="publishing-documentation">Publishing documentation<a href="#publishing-documentation" class="hash-link" aria-label="Direct link to Publishing documentation" title="Direct link to Publishing documentation" translate="no">​</a></h2>
+<p>The <code>Publish documentation</code> workflow in <code>.github/workflows/docs.yml</code> runs on
+documentation, website, package or build-configuration changes pushed to <code>main</code>.
+It also supports a manual run from GitHub Actions on <code>main</code>.</p>
+<p>The workflow builds package declarations, validates and builds the documentation,
+then syncs only <code>website/build/</code> to the <code>main</code> branch of the public
+<a href="https://github.com/FrameActive-Studio/ROFRAME-DOCS" target="_blank" rel="noopener noreferrer" class="">FrameActive-Studio/ROFRAME-DOCS</a>
+repository. Git history is retained, and unchanged builds do not create commits.
+The destination is generated output; make content changes in the framework
+repository instead of editing the published files.</p>
+<p>The build uses <code>DOCS_URL=https://frameactive-studio.github.io</code> and
+<code>DOCS_BASE_URL=/ROFRAME-DOCS/</code>. The published documentation, including its API tab,
+is available at <a href="https://frameactive-studio.github.io/ROFRAME-DOCS/" target="_blank" rel="noopener noreferrer" class="">https://frameactive-studio.github.io/ROFRAME-DOCS/</a>.
+GitHub Pages in the destination repository publishes from <strong>main / (root)</strong>;
+<code>.nojekyll</code> preserves the prebuilt Docusaurus assets.</p>
+<p>The framework repository&#x27;s <code>DOCS_PUSH_TOKEN</code> Actions secret contains a fine-grained
+personal access token restricted to <code>ROFRAME-DOCS</code>, with <strong>Contents: read and write</strong>
+and the required <strong>Metadata: read-only</strong> permission. The built-in <code>GITHUB_TOKEN</code>
+only reads the source repository. Deploy keys are disabled for the destination.
+To rotate access before the token expires, create a replacement with the same
+repository and permissions, update <code>DOCS_PUSH_TOKEN</code> in <code>ROFRAME</code>, verify a
+deployment, then revoke the previous token. Never commit tokens or paste them
+into workflow files.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="api-documentation">API documentation<a href="#api-documentation" class="hash-link" aria-label="Direct link to API documentation" title="Direct link to API documentation" translate="no">​</a></h2>
+<p>Open the <strong>API</strong> tab in the top navigation to browse the generated reference with
+its own sidebar. The <strong>Documentation</strong> tab contains the guides and their navigation.</p>
+<p>TypeDoc generates the API reference automatically when <code>npm run docs:start</code> or
+<code>npm run docs:build</code> runs. After TypeScript changes, restart the documentation
+server or build again to regenerate the reference.
+The development server polls files once per second to keep reloads stable with
+the generated API directory on macOS.
+The public package entry points are <code>packages/core/src/index.ts</code>, <code>packages/core/src/ui/index.ts</code>
+and <code>packages/cartoon-ui/src/index.ts</code>. Export new public APIs through the relevant
+entry point to include them. Private, protected and <code>@internal</code> members are hidden.</p>
+<p>Function signatures, generics, parameters and return types come from TypeScript.
+Descriptions, usage examples and behavior notes come from documentation comments:</p>
+<div class="language-ts codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-ts codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#bfc7d5"><span class="token doc-comment comment" style="color:rgb(105, 112, 152);font-style:italic">/**</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token doc-comment comment" style="color:rgb(105, 112, 152);font-style:italic"> * Registers a listener called whenever the signal fires.</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token doc-comment comment" style="color:rgb(105, 112, 152);font-style:italic"> * </span><span class="token doc-comment comment keyword" style="color:rgb(105, 112, 152);font-style:italic">@param</span><span class="token doc-comment comment" style="color:rgb(105, 112, 152);font-style:italic"> </span><span class="token doc-comment comment parameter" style="color:rgb(105, 112, 152);font-style:italic">callback</span><span class="token doc-comment comment" style="color:rgb(105, 112, 152);font-style:italic"> - Receives the arguments passed to fire().</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token doc-comment comment" style="color:rgb(105, 112, 152);font-style:italic"> * </span><span class="token doc-comment comment keyword" style="color:rgb(105, 112, 152);font-style:italic">@returns</span><span class="token doc-comment comment" style="color:rgb(105, 112, 152);font-style:italic"> A connection that can be disconnected or owned by Cleanup.</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token doc-comment comment" style="color:rgb(105, 112, 152);font-style:italic"> * </span><span class="token doc-comment comment keyword" style="color:rgb(105, 112, 152);font-style:italic">@example</span><span class="token doc-comment comment" style="color:rgb(105, 112, 152);font-style:italic"></span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token doc-comment comment" style="color:rgb(105, 112, 152);font-style:italic"> * ```ts</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token doc-comment comment" style="color:rgb(105, 112, 152);font-style:italic"> * const connection = changed.connect((value) =&gt; print(value));</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token doc-comment comment" style="color:rgb(105, 112, 152);font-style:italic"> * connection.disconnect();</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token doc-comment comment" style="color:rgb(105, 112, 152);font-style:italic"> * ```</span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token doc-comment comment" style="color:rgb(105, 112, 152);font-style:italic"> */</span><br></div></code></pre></div></div>
+<p>See <code>Signal.connect</code> in <code>packages/core/src/core/signal.ts</code> for a complete example.
+Add <code>@internal</code> to exclude an exported implementation detail. TypeDoc does not
+infer behavioral descriptions from function bodies; undocumented exports still
+show their signatures and types. Generated Markdown in <code>docs/api/</code> is overwritten
+on regeneration, so edit the source comments instead. This reference documents
+the Roblox/roblox-ts library API; it does not expose HTTP endpoints.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="generated-output">Generated output<a href="#generated-output" class="hash-link" aria-label="Direct link to Generated output" title="Direct link to Generated output" translate="no">​</a></h2>
+<p>roblox-ts owns each package’s <code>out/</code>, plus <code>demo/out/</code> and <code>demo/include/</code>. Rojo reads generated output through <code>demo/default.project.json</code> (forwarded by the root project). Place builds and sourcemaps are written to <code>build/</code>; Node test output is written to <code>test-out/</code>. All generated directories are ignored by Git.</p>
+<p>Docusaurus writes static output to <code>website/build/</code> and its cache to
+<code>website/.docusaurus/</code>; both are ignored by Git.</p>
+<p>TypeDoc writes generated API pages and sidebar data to <code>docs/api/</code>, also ignored
+by Git.</p>
+<p>If Studio cannot connect, verify that <code>npm run build</code> succeeds first, then confirm that no other process is using Rojo&#x27;s default port <code>34872</code>.</p></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/ROFRAME-DOCS/"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Overview</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/ROFRAME-DOCS/PACKAGING/"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Packaging and releases</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#boundaries" class="table-of-contents__link toc-highlight">Boundaries</a></li><li><a href="#commands" class="table-of-contents__link toc-highlight">Commands</a></li><li><a href="#first-setup" class="table-of-contents__link toc-highlight">First setup</a></li><li><a href="#documentation-website" class="table-of-contents__link toc-highlight">Documentation website</a></li><li><a href="#publishing-documentation" class="table-of-contents__link toc-highlight">Publishing documentation</a></li><li><a href="#api-documentation" class="table-of-contents__link toc-highlight">API documentation</a></li><li><a href="#generated-output" class="table-of-contents__link toc-highlight">Generated output</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">RoFrame — TypeScript-first Roblox framework</div></div></div></footer></div>
+</body>
+</html>

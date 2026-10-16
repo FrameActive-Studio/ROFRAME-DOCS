@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-CARTOON_UI_AUDIT" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.10.2">
+<title data-rh="true">Cartoon UI audit | RoFrame</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://frameactive-studio.github.io/ROFRAME-DOCS/CARTOON_UI_AUDIT/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Cartoon UI audit | RoFrame"><meta data-rh="true" name="description" content="Source of truth: the existing Coin Hunt UI, inspected before module implementation"><meta data-rh="true" property="og:description" content="Source of truth: the existing Coin Hunt UI, inspected before module implementation"><link data-rh="true" rel="canonical" href="https://frameactive-studio.github.io/ROFRAME-DOCS/CARTOON_UI_AUDIT/"><link data-rh="true" rel="alternate" href="https://frameactive-studio.github.io/ROFRAME-DOCS/CARTOON_UI_AUDIT/" hreflang="en"><link data-rh="true" rel="alternate" href="https://frameactive-studio.github.io/ROFRAME-DOCS/CARTOON_UI_AUDIT/" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Cartoon UI audit","item":"https://frameactive-studio.github.io/ROFRAME-DOCS/CARTOON_UI_AUDIT"}]}</script><link rel="stylesheet" href="/ROFRAME-DOCS/assets/css/styles.0a148d1f.css">
+<script src="/ROFRAME-DOCS/assets/js/runtime~main.2c1eda10.js" defer="defer"></script>
+<script src="/ROFRAME-DOCS/assets/js/main.534653a9.js" defer="defer"></script>
+</head>
+<body>
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/ROFRAME-DOCS/"><b class="navbar__title text--truncate">RoFrame</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/ROFRAME-DOCS/">Documentation</a><a class="navbar__item navbar__link" href="/ROFRAME-DOCS/api/">API</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ROFRAME-DOCS/"><span class="linkLabel_WmDU">Overview</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/ROFRAME-DOCS/DEVELOPMENT/"><span class="categoryLinkLabel_W154">Getting started</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/DEVELOPMENT/"><span class="linkLabel_WmDU">Development workflow</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/PACKAGING/"><span class="linkLabel_WmDU">Packaging and releases</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/DEMO/"><span class="linkLabel_WmDU">Coin Hunt demo</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/ROFRAME-DOCS/KERNEL/"><span class="categoryLinkLabel_W154">Core</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/KERNEL/"><span class="linkLabel_WmDU">Kernel</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/COMPONENTS/"><span class="linkLabel_WmDU">Components</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/NETWORKING/"><span class="linkLabel_WmDU">Networking</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/STORES/"><span class="linkLabel_WmDU">Stores</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/PERSISTENCE/"><span class="linkLabel_WmDU">Persistence</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/PLAYER_LIFECYCLE/"><span class="linkLabel_WmDU">Player lifecycle</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/UI/"><span class="linkLabel_WmDU">UI</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/CORE_UTILITIES/"><span class="linkLabel_WmDU">Core utilities</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/PLATFORM_SERVICES/"><span class="linkLabel_WmDU">Platform services</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/MODULES/"><span class="linkLabel_WmDU">Modules</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/DEVELOPER_TOOLS/"><span class="linkLabel_WmDU">Developer tools</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/ROFRAME-DOCS/CARTOON_UI/"><span class="categoryLinkLabel_W154">Optional packages and integration notes</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/CARTOON_UI/"><span class="linkLabel_WmDU">Cartoon UI</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/CAMERA/"><span class="linkLabel_WmDU">Camera (skeleton)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/ANIMATOR/"><span class="linkLabel_WmDU">Animator (skeleton)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/ROFRAME-DOCS/CARTOON_UI_AUDIT/"><span class="linkLabel_WmDU">Cartoon UI audit</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ROFRAME-DOCS/DEMO_CORE_ISSUES/"><span class="linkLabel_WmDU">Demo Core findings</span></a></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/ROFRAME-DOCS/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Optional packages and integration notes</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Cartoon UI audit</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Cartoon UI audit</h1></header>
+<p>Source of truth: the existing Coin Hunt UI, inspected before module implementation
+on 2026-10-15. This is a source audit; native Studio rendering has not been
+verified during this milestone. The neutral Phase 8 UI is infrastructure, not a
+replacement visual reference.</p>
+<p>The source paths below describe the pre-migration audit. Phase G removed the
+former <code>demo/client/ui/cartoon.tsx</code>; the extraction/migration mapping is retained
+here as the visual baseline rather than as an inventory of current files.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="reusable-visual-language">Reusable visual language<a href="#reusable-visual-language" class="hash-link" aria-label="Direct link to Reusable visual language" title="Direct link to Reusable visual language" translate="no">​</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Source</th><th>Pattern</th><th>Extraction</th></tr></thead><tbody><tr><td><code>demo/client/ui/cartoon.tsx</code>: CartoonText</td><td>Fredoka One, fitted text, dark outline, minimum 10 px</td><td>CartoonText with typography variants</td></tr><tr><td>Same: Edge, Surface</td><td>3 px ink border, slate fill, 12 px corners</td><td>CartoonFrame, CartoonPanel, CartoonCard</td></tr><tr><td>Same: Shine</td><td>Vertical gradient: 32% paper highlight, base at 48%, 15% ink bottom</td><td>Cached gradient per theme/color</td></tr><tr><td>Same: ToyButton</td><td>180 × 52 default, 10 px radius, 5 px hard shadow, top glint</td><td>CartoonButton</td></tr><tr><td>Same: Icon</td><td>Coin, trophy, menu, settings, shield, info, play; native GUI shapes on a 48 px canvas</td><td>CartoonIcon, with replaceable image option</td></tr><tr><td>Same: Window</td><td>Centered 410–740 px window, 18 px body corners, 9 px shadow, 63 px colored title strip, X</td><td>CartoonModal and ConfirmDialog composition (Phase E)</td></tr><tr><td><code>demo-hud.tsx</code>: StatChip</td><td>236 × 54 outlined slate counter, 42 px icon, 12 px label, 26 px value, plus action</td><td>CartoonCounter (Phase D); optional compact presentation and action</td></tr><tr><td><code>demo-windows.tsx</code>: Collection</td><td>Light inset panel, 104 × 126 cards, selected white 4 px border, colored 2.5 px idle border, detail pane</td><td>CartoonCard now; selected/card composition later</td></tr><tr><td>Same: ToggleRow</td><td>68 px row, 88 × 34 switch, text On/Off as well as color</td><td>Potential later switch; no custom input engine</td></tr><tr><td>Same: CollectorBar</td><td>392 × 21 ink track, 3 px inset, green gradient fill</td><td>CartoonProgressBar (Phase D); generic min/max and optional header</td></tr><tr><td><code>shared/ui/notifications.tsx</code> + demo controller</td><td>320 × 58 elevated toast, 2 px status stroke, Fredoka caption, right stack</td><td>CartoonToast/Viewport over the existing Core NotificationCenter (Phase E)</td></tr><tr><td><code>animated-coin-value.tsx</code></td><td>One value pop + one aggregated floating gain, native bounded tweens</td><td>Optional value-only CartoonCounter pulse (Phase D); reward/gain popup logic stays in demo</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="tokens-and-typography">Tokens and typography<a href="#tokens-and-typography" class="hash-link" aria-label="Direct link to Tokens and typography" title="Direct link to Tokens and typography" translate="no">​</a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Token</th><th>Existing value / use</th></tr></thead><tbody><tr><td>ink / background / border</td><td>RGB 18, 28, 40</td></tr><tr><td>paper / text</td><td>RGB 247, 250, 255</td></tr><tr><td>slate / surface</td><td>RGB 45, 67, 82</td></tr><tr><td>elevated</td><td>RGB 37, 55, 70 (demo&#x27;s Core theme)</td></tr><tr><td>inset surface</td><td>RGB 215, 227, 236 (collection)</td></tr><tr><td>muted text</td><td>RGB 193, 225, 240 (menu hint)</td></tr><tr><td>gold / warning / accent</td><td>RGB 255, 187, 51</td></tr><tr><td>teal / secondary</td><td>RGB 26, 191, 161</td></tr><tr><td>pink</td><td>RGB 235, 90, 202</td></tr><tr><td>blue / primary / info</td><td>RGB 76, 166, 241</td></tr><tr><td>green / success</td><td>RGB 122, 225, 60</td></tr><tr><td>red / danger</td><td>RGB 235, 91, 76</td></tr><tr><td>disabled fill</td><td>RGB 108, 134, 144</td></tr><tr><td>coin inset / lettering</td><td>RGB 188, 112, 24 / 255, 241, 170</td></tr><tr><td>typography</td><td>Fredoka One; display 34, heading 31, body 22, caption 13, button 23, counter 26 px</td></tr><tr><td>text outline</td><td>ink, 2 px at sizes ≥20; 1.2 px below; 10 px minimum</td></tr><tr><td>radius</td><td>8 small (switch), 10 button, 12 surface/card, 18 window, 22 window shadow, full-scale pill</td></tr><tr><td>borders</td><td>1.2 thin, 3 normal, 4 selected; icons use 2–2.5</td></tr><tr><td>spacing</td><td>Repeated 3/4 px insets, 8/16/18 px margins; 14 px inner padding; 16 px menu gaps</td></tr><tr><td>shadows</td><td>Hard layered frame: button +5 px, mixed 50% ink; window +9 px, 50% transparent ink</td></tr><tr><td>gradient</td><td>Vertical, keypoints 0 / .48 / 1; top mixed .32 paper, bottom .15 ink</td></tr></tbody></table>
+<p>Fredoka One supplies the weight; there is no separate font-weight or line-height
+engine. Text uses Roblox sizing constraints. Exposed typography presets allow
+each role&#x27;s font, size and stroke to change. Additional sizes (small/large
+buttons, generic image icon) are missing primitives derived from these values,
+not a new visual direction.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="interaction-and-motion">Interaction and motion<a href="#interaction-and-motion" class="hash-link" aria-label="Direct link to Interaction and motion" title="Direct link to Interaction and motion" translate="no">​</a></h2>
+<ul>
+<li class="">Idle buttons: gradient face and fixed shadow. Hover/GUI selection: 15% paper
+highlight and paper border. Press: face moves down 4 px. Mouse leave and
+selection loss clear press state. Disabled: gray face; activation and selection
+disabled. Existing buttons have no loading state; the module adds a static
+ellipsis and blocks activation without a permanent animation loop.</li>
+<li class="">Native Activated supports mouse/touch/gamepad; SelectionGained/Lost reuse
+hover appearance. UI routing and M/D-pad Up bindings stay in the demo/Core.</li>
+<li class="">Modal backdrop: ink at .55 transparency; click dismisses. The window itself
+consumes input. No entrance/exit animation exists in the source windows.</li>
+<li class="">Coin feedback: .08 s Quad pop to 1.1, .24 s Back settle, .6 s float/fade over
+16 px. Initial balance and spending do not trigger it. Cleanup cancels previous
+bursts and releases tweens and completion connections.</li>
+<li class="">Notifications use one-shot scheduler delays (demo: three entries, three
+seconds; achievement: five seconds). No toast enter/exit animation exists yet.</li>
+<li class="">No tooltip, tabs, side navigation framework, badge component, loading spinner
+or image icon assets exist. Do not claim these were extracted from the demo.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="layout-and-responsive-behavior">Layout and responsive behavior<a href="#layout-and-responsive-behavior" class="hash-link" aria-label="Direct link to Layout and responsive behavior" title="Direct link to Layout and responsive behavior" translate="no">​</a></h2>
+<ul>
+<li class="">Windows fit available dimensions using <code>min(1, (width-32)/panelWidth, (height-32)/panelHeight)</code> with an existing .1 lower clamp.</li>
+<li class="">HUD scale uses width/1100 and height/650, capped at 1 with .6/.65 floors.</li>
+<li class="">At width &lt;700 the logo anchors right and the menu moves to the top right;
+the notification stack moves below it. Viewport AbsoluteSize events drive
+changes. ScreenGui respects Roblox&#x27;s inset.</li>
+<li class="">Collection uses a fixed card row plus right detail pane; scaled as a whole.
+The current lower scale clamps can make text/touch targets small or overflow
+extremely tiny viewports. Treat this as a later responsive-validation item,
+not evidence of verified accessibility on every device.</li>
+<li class="">Roblox layouts/constraints remain preferred; no custom layout or focus engine.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="demo-specific-behavior">Demo-specific behavior<a href="#demo-specific-behavior" class="hash-link" aria-label="Direct link to Demo-specific behavior" title="Direct link to Demo-specific behavior" translate="no">​</a></h2>
+<p>Coin balance, lifetime pickups, Collector I, thresholds 1/5/10/25, persisted
+achievement flags, admin commands, profile readiness, round pause, localization
+keys, audio preferences, pickup popup aggregation and menu destinations stay
+under <code>demo/src/demo</code>. The module owns only presentation and interaction primitives.</p>
+<p>No GUI image IDs need migration: icons are native shapes. Demo audio assets
+belong to the gameplay demo and do not become Cartoon UI dependencies.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="integration-decisions">Integration decisions<a href="#integration-decisions" class="hash-link" aria-label="Direct link to Integration decisions" title="Direct link to Integration decisions" translate="no">​</a></h2>
+<p>The generic <code>UITheme</code> lacks cartoon borders, shadows and per-role typography.
+Use one cartoon context for those extra tokens and project its common values
+into the existing Core ThemeProvider. Core components (for example TextInput)
+then share the same theme without importing the optional module. UIController
+continues to own roots; NotificationCenter, Cleanup and native GUI selection
+remain the infrastructure.</p>
+<p>The optional manifest uses the actual <code>defineModule</code> API. Its shared entry
+imports no React or client code. Explicit registration is supported by RoFrame;
+the primitive milestone adds no automatic demo registration or UI mount. Module
+enablement controls lifecycle; mounting consumers must also follow the game&#x27;s
+activation choice because Core starts Controllers before module hooks.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="phase-d-additions">Phase D additions<a href="#phase-d-additions" class="hash-link" aria-label="Direct link to Phase D additions" title="Direct link to Phase D additions" translate="no">​</a></h2>
+<p>Counter and progress dimensions, inset and counter caption size are now theme
+tokens. The action button uses a 44 px target; the normal counter footprint stays
+236 × 54. Counter motion is an optional generic change pulse with the demo&#x27;s
+.08/.24 second timing and 1.1 scale, without coin-specific gain aggregation.
+Progress transitions use a bounded native tween and no per-frame React state.</p>
+<p>Badge, StatRow and Loading fill gaps in the source UI. Badge reuses existing
+outlined pill shapes, semantic colors and caption text; StatRow pairs existing
+text roles in two columns; Loading uses three static outlined circles with an
+optional localized caption. These are new compositions of audited primitives,
+not claims that the demo contained a badge component or spinner. The expanded
+gallery demonstrates them under both default and Ocean tokens. Demo migration
+remains Phase G.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="phase-e-additions">Phase E additions<a href="#phase-e-additions" class="hash-link" aria-label="Direct link to Phase E additions" title="Direct link to Phase E additions" translate="no">​</a></h2>
+<p>The source window maps to CartoonModal&#x27;s slate body, hard shadow, rounded gradient
+title strip and close action. The backdrop&#x27;s .55 transparency is now a theme token
+and reusable ScreenOverlay. ConfirmDialog composes the modal without gameplay or
+async ownership. Modal safe fitting includes shadow/title overhang and removes
+the source&#x27;s .1 lower scale clamp; native viewport events drive sizing. Footer
+actions and tiny-view/long-content behavior still need visual device validation.</p>
+<p>CartoonToastCenter decorates the existing Core queue with title/icon/reward
+metadata. Core still owns limits, IDs and one-shot timers. Toast presentation
+keeps the audited surface and outline, adds an optional 44 px X, and retains a
+bounded number of removed rows for native exit slides. Pop, slide and fade are
+small new discrete transitions; they did not exist in the original windows/toasts.
+They use theme timing and Cleanup, with no render loop or new animation runtime.
+The gallery demonstrates each under both themes. Native hit testing, focus and
+input behavior remain manual checks.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="phase-f-additions">Phase F additions<a href="#phase-f-additions" class="hash-link" aria-label="Direct link to Phase F additions" title="Direct link to Phase F additions" translate="no">​</a></h2>
+<p>Shared presets now drive button hover/press/release, panel pop, modal pop, toast
+slide, progress, counter pulses and overlay fades. The source&#x27;s press offset and
+counter easing/timing remain; hoverScale/pressScale default to 1. Panel pop (.97)
+is an optional new transition for a source gap. Zero/reduced motion applies targets
+without allocating tweens. Every transition uses Cleanup and cancels on replacement.</p>
+<p>Button mouse hover and GUI selection are independent. A press owns temporary
+release/window-focus listeners; touch release matches the original finger, and
+disable/loading/unmount releases ownership. Native Activated remains the callback.</p>
+<p>Modal focus uses GuiService.Select, native selection groups/order and valid caller
+restoration. One shared Core Input binding handles Escape/B while any modal is
+present. Layer priority, busy/exit consumption, text focus and out-of-order teardown
+are covered by injected-port logic tests. Native dispatch, system-menu priority and
+device navigation still need Studio testing. The gallery adds animated panels,
+a Core TextInput and nested confirm for that purpose.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="phase-g-migration">Phase G migration<a href="#phase-g-migration" class="hash-link" aria-label="Direct link to Phase G migration" title="Direct link to Phase G migration" translate="no">​</a></h2>
+<p>Coin Hunt now imports the public Cartoon UI API directly. The duplicate text,
+icon, button, surface, shadow, gradient and window implementations in its old
+<code>cartoon.tsx</code> are removed. The HUD uses CartoonCounter, its bottom track uses
+CartoonProgressBar, and all windows use CartoonModal. Selected milestone borders
+and switches remain demo compositions over CartoonCard/Frame and native buttons;
+no inventory or settings subsystem was introduced in the module.</p>
+<p>The counter&#x27;s optional valueContent slot preserves the demo&#x27;s gain-only pulse,
+gold flash and aggregated floating <code>+N</code>. Native effect refs use theme typography
+and colors. That effect, Store subscriptions, localization, milestone selection,
+settings, admin requests and coin rules stay under <code>demo/src/demo</code>.</p>
+<p>The demo explicitly registers/enables the manifest in client bootstrap and gates
+the UI with the same flag. Toast presentation borrows the existing Core queue,
+retaining its three-entry capacity and three/five-second lifetimes. Most former
+instant transitions opt out of module motion. D-pad Up now passes through while
+windows are open so native selection can move upward; B closes the modal.</p>
+<p>Window dimensions, sidebar positions and HUD scale retain the source layout.
+Module safe fitting includes overhang and removes the old scale floor. The X is
+a standard 44 px target; counter geometry, toast insets and Core TextInput adopt
+the common tokens. Source/type/build checks cover this migration; pixel alignment,
+clipping, native focus and device behavior still require the documented Studio
+comparison. No native visual equivalence is claimed yet.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="cartoon-motion-pass">Cartoon motion pass<a href="#cartoon-motion-pass" class="hash-link" aria-label="Direct link to Cartoon motion pass" title="Direct link to Cartoon motion pass" translate="no">​</a></h2>
+<p>Following the request for livelier motion, the source&#x27;s instant interaction is
+now deliberately extended: .28 s Back Out entrances/rebounds, .16 s Quad In
+exits, .82 modal scale with a 24 px arrival, .9 panel scale, and 1.035/.94 hover/
+press button scales. Colors, outlines, native icons and hard-shadow geometry keep
+their audited identity; the shadow still matches the current button border.</p>
+<p>Button input stays on a fixed native TextButton while only the centered visual
+frame moves. This prevents squash feedback from cancelling edge clicks. The
+modal clipping allowance includes hover growth. Demo windows retain their last
+page while exiting, disable exit actions, and use transitionKey to pop between
+pages without replacing the focus owner. Collection details and Settings knobs
+also animate. Progress/counter/toast motion is enabled in the demo; the gain-only
+coin effect retains its separate existing rules and timing.</p>
+<p>Motion remains discrete, theme-controlled and Cleanup-owned, with no frame loop.
+Reduced/zero motion and rapid replacement are covered by preset/tween tests;
+page retention is checked as a composition contract. Native feel, edge clicking,
+focus and clipping under rapid reversals still require the Studio checklist.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="notification-surface-alignment">Notification surface alignment<a href="#notification-surface-alignment" class="hash-link" aria-label="Direct link to Notification surface alignment" title="Direct link to Notification surface alignment" translate="no">​</a></h2>
+<p>Following the request to match the coin display, toasts now share the counter&#x27;s
+slate CartoonShine gradient, medium corners and normal ink outline. Status color
+moves from the outer border to the title or untitled message. Queue ownership,
+duration, dismissal, dimensions and slide transitions remain unchanged.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="controller-focus-corners">Controller focus corners<a href="#controller-focus-corners" class="hash-link" aria-label="Direct link to Controller focus corners" title="Direct link to Controller focus corners" translate="no">​</a></h2>
+<p>Native selection now uses four rounded white brackets with a thin ink outline,
+leaving the sides open. The initial nested SelectionImageObject template was
+invisible in Studio despite a selected gamepad control. Brackets now live in the
+real GUI tree and follow native selection events; a childless transparent native
+adornment suppresses the default frame without changing navigation/input ownership.
+Buttons include their hard shadow; modal clipping allowance includes the brackets.
+Collection cards, switches and Core text inputs in the demo use the same public
+CartoonFocusCorners composition.</p>
+<p>The corrected ordinary-GUI composition was verified in the active Studio client:
+gamepad preferred input selected the main-menu Play button, and a viewport capture
+showed all four white outlined corners. Selected button borders now stay ink so
+the old full white outline does not compete with the brackets. A regression test
+covers real-tree parenting, initial selection, gain/loss, disabling, restoration
+and connection/instance cleanup.</p>
+<p>The subsequent symmetry/layering pass replaces clipped rounded rectangles with
+one mirrored curved path, drawn as white rounded capsules over an ink silhouette.
+Only the selected control owns an overlay ScreenGui at DisplayOrder 2147483647,
+outside source clipping/padding and sibling stacking contexts. Screen-space bounds
+and UI scale position the brackets around the animated button plus its shadow.
+Geometry tests cover small, square, wide and tall controls; native-port tests cover
+overlay reuse during bounds changes, hidden/disabled ancestors, focus lifecycle
+and complete cleanup. Active Studio captures verified the long Play button,
+collection cards and small modal X, including its corners above the title strip.</p></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/ROFRAME-DOCS/ANIMATOR/"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Animator (skeleton)</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/ROFRAME-DOCS/DEMO_CORE_ISSUES/"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Demo Core findings</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#reusable-visual-language" class="table-of-contents__link toc-highlight">Reusable visual language</a></li><li><a href="#tokens-and-typography" class="table-of-contents__link toc-highlight">Tokens and typography</a></li><li><a href="#interaction-and-motion" class="table-of-contents__link toc-highlight">Interaction and motion</a></li><li><a href="#layout-and-responsive-behavior" class="table-of-contents__link toc-highlight">Layout and responsive behavior</a></li><li><a href="#demo-specific-behavior" class="table-of-contents__link toc-highlight">Demo-specific behavior</a></li><li><a href="#integration-decisions" class="table-of-contents__link toc-highlight">Integration decisions</a></li><li><a href="#phase-d-additions" class="table-of-contents__link toc-highlight">Phase D additions</a></li><li><a href="#phase-e-additions" class="table-of-contents__link toc-highlight">Phase E additions</a></li><li><a href="#phase-f-additions" class="table-of-contents__link toc-highlight">Phase F additions</a></li><li><a href="#phase-g-migration" class="table-of-contents__link toc-highlight">Phase G migration</a></li><li><a href="#cartoon-motion-pass" class="table-of-contents__link toc-highlight">Cartoon motion pass</a></li><li><a href="#notification-surface-alignment" class="table-of-contents__link toc-highlight">Notification surface alignment</a></li><li><a href="#controller-focus-corners" class="table-of-contents__link toc-highlight">Controller focus corners</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">RoFrame — TypeScript-first Roblox framework</div></div></div></footer></div>
+</body>
+</html>

@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.10.2">
 <title data-rh="true">Cartoon UI — components, interaction and animation | RoFrame</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://frameactive-studio.github.io/ROFRAME-DOCS/CARTOON_UI/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Cartoon UI — components, interaction and animation | RoFrame"><meta data-rh="true" name="description" content="An optional React-Lua skin extracted from Coin Hunt&#x27;s existing UI. The source"><meta data-rh="true" property="og:description" content="An optional React-Lua skin extracted from Coin Hunt&#x27;s existing UI. The source"><link data-rh="true" rel="canonical" href="https://frameactive-studio.github.io/ROFRAME-DOCS/CARTOON_UI/"><link data-rh="true" rel="alternate" href="https://frameactive-studio.github.io/ROFRAME-DOCS/CARTOON_UI/" hreflang="en"><link data-rh="true" rel="alternate" href="https://frameactive-studio.github.io/ROFRAME-DOCS/CARTOON_UI/" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Cartoon UI","item":"https://frameactive-studio.github.io/ROFRAME-DOCS/CARTOON_UI"}]}</script><link rel="stylesheet" href="/ROFRAME-DOCS/assets/css/styles.0202368a.css">
-<script src="/ROFRAME-DOCS/assets/js/runtime~main.677558f8.js" defer="defer"></script>
-<script src="/ROFRAME-DOCS/assets/js/main.4f374156.js" defer="defer"></script>
+<script src="/ROFRAME-DOCS/assets/js/runtime~main.10162734.js" defer="defer"></script>
+<script src="/ROFRAME-DOCS/assets/js/main.f8e8c503.js" defer="defer"></script>
 </head>
 <body>
 <svg style="display: none;"><defs>
@@ -177,7 +177,35 @@ overrides. Component implementations remain the same.</p>
 
 
 
-<table><thead><tr><th>Component</th><th>Main options</th></tr></thead><tbody><tr><td>CartoonFrame</td><td>color, transparency, borderColor/Thickness, radius (UDim), shadow, padding, clipsDescendants, children</td></tr><tr><td>CartoonPanel</td><td>Frame props + default/elevated/flat/transparent variant; open, animated, transitionKey; large radius and inner padding</td></tr><tr><td>CartoonCard</td><td>Frame props; medium radius and inner padding</td></tr><tr><td>CartoonText</td><td>text, display/heading/body/caption/button/counter variant, textSize, color, transparency, align, wrapped</td></tr><tr><td>CartoonIcon</td><td>native name or image string, size in pixels, tint, transparency, optional image aspectRatio</td></tr><tr><td>CartoonButton</td><td>text, icon/iconImage, top/left/right iconPosition, variant/tone, onActivated, disabled/loading/loadingText, sizeVariant, fullWidth, selectionOrder, buttonRef, animated</td></tr><tr><td>CartoonCounter</td><td>value (number/string), optional label/icon/iconImage, tone, compact, animated, onAction/actionText, valueContent</td></tr><tr><td>CartoonProgressBar</td><td>value, min/max (defaults 0/100), label, showPercentage, animated, fillColor</td></tr><tr><td>CartoonBadge</td><td>required text, neutral/info/success/warning/error variant, optional tone/icon/iconImage</td></tr><tr><td>CartoonStatRow</td><td>label, value (number/string), labelColor, valueColor; separate left/right text columns</td></tr><tr><td>CartoonLoading</td><td>three static outlined dots, optional localized label and color</td></tr><tr><td>CartoonToast</td><td>message, title, info/success/warning/error/reward variant, icon/iconImage, onClose/closeButton, animated, exiting/onExited</td></tr><tr><td>CartoonToastViewport</td><td>context-owned toast stack, common layout props, animated, maxExiting (default 4)</td></tr><tr><td>CartoonModal</td><td>open, title, onClose, closeButton, backdrop, dismissOnBackdrop/Escape/GamepadBack, actions, size (Vector2), tone/color, animated, transitionKey, zIndex, autoFocus, initialFocus, restoreFocus</td></tr><tr><td>CartoonConfirmDialog</td><td>Modal props + message/onConfirm, confirmText/cancelText/confirmVariant, busy</td></tr><tr><td>CartoonScreenOverlay</td><td>open, color/transparency, animated, blocksInput, onActivated, zIndex; covers the viewport</td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Component</th><th>Main options</th></tr></thead><tbody><tr><td>CartoonFrame</td><td>color, transparency, borderColor/Thickness, radius (UDim), shadow, padding, clipsDescendants, children</td></tr><tr><td>CartoonPanel</td><td>Frame props + default/elevated/flat/transparent variant; open, animated, transitionKey; large radius and inner padding</td></tr><tr><td>CartoonCard</td><td>Frame props; medium radius and inner padding</td></tr><tr><td>CartoonText</td><td>shared display text: text, variant, textSize, color, transparency, align/verticalAlign, wrapped, font, scaled, stroke, richText (default false)</td></tr><tr><td>CartoonIcon</td><td>native name or image string, size in pixels, tint, transparency, optional image aspectRatio</td></tr><tr><td>CartoonButton</td><td>text, icon/iconImage, top/left/right iconPosition, variant/tone, onActivated, disabled/loading/loadingText, sizeVariant, fullWidth, selectionOrder, buttonRef, animated</td></tr><tr><td>CartoonButtonGroup</td><td>buttons with stable id and Button props, horizontal/vertical direction, gap; equal-width cells</td></tr><tr><td>CartoonTabs</td><td>tabs with id/label/content/disabled, controlled value/onChanged, contentHeight, gap</td></tr><tr><td>CartoonSelect</td><td>options with value/label/description/icon/disabled, value/onChanged, label/placeholder/error/helperText, renderOption, maxMenuHeight</td></tr><tr><td>CartoonDropdownButton</td><td>text, items with id/label/onActivated/description/icon/disabled, variant, disabled, maxMenuHeight</td></tr><tr><td>CartoonInputGroup</td><td>Input props plus prefix, suffix, action, adornmentWidth/actionWidth</td></tr><tr><td>CartoonForm</td><td>children, automatic field order/height, gap/padding, disabled/submitting, optional onSubmit/submitText</td></tr><tr><td>CartoonRelativeTime</td><td>timestamp in Unix seconds, locale de/en, optional fixed now, all Text presentation props</td></tr><tr><td>CartoonCounter</td><td>value (number/string), optional label/icon/iconImage, tone, compact, animated, onAction/actionText, valueContent</td></tr><tr><td>CartoonProgressBar</td><td>value, min/max (defaults 0/100), label, showPercentage, animated, fillColor</td></tr><tr><td>CartoonBadge</td><td>required text, neutral/info/success/warning/error variant, optional tone/icon/iconImage</td></tr><tr><td>CartoonStatRow</td><td>label, value (number/string), labelColor, valueColor; separate left/right text columns</td></tr><tr><td>CartoonLoading</td><td>three animated bouncing dots while data is pending; optional label/color, controlled loading state and reduced motion</td></tr><tr><td>CartoonToast</td><td>message, title, info/success/warning/error/reward variant, icon/iconImage, onClose/closeButton, animated, exiting/onExited</td></tr><tr><td>CartoonToastViewport</td><td>context-owned toast stack, common layout props, animated, maxExiting (default 4)</td></tr><tr><td>CartoonModal</td><td>open, title, onClose, closeButton, backdrop, dismissOnBackdrop/Escape/GamepadBack, actions, size (Vector2), tone/color, animated, transitionKey, zIndex, autoFocus, initialFocus, restoreFocus</td></tr><tr><td>CartoonConfirmDialog</td><td>Modal props + message/onConfirm, confirmText/cancelText/confirmVariant, busy</td></tr><tr><td>CartoonScreenOverlay</td><td>open, color/transparency, animated, blocksInput, onActivated, zIndex; covers the viewport</td></tr></tbody></table>
 <p>Common layout props: position, size (Icon uses a numeric size), anchorPoint,
 layoutOrder, zIndex and visible. Native layouts/constraints can be composed as
 container children. Padding is in pixels. Buttons have small/medium/large heights
@@ -236,14 +264,21 @@ labels and large formatted values. Explicit component size controls the outer
 footprint; progress headers need vertical space as well as the track.</p>
 <p>Badges require text so color is not the sole status signal. Named tones override
 semantic variants. StatRow is a transparent pair of fitted text columns, with no
-gameplay state. Loading adds a small static ellipsis motif using existing circles,
-outlines and tokens; the source demo contained no animated spinner.</p>
+gameplay state. Loading adds a small animated ellipsis motif using existing circles,
+outlines and tokens. <code>loading={false}</code> removes the indicator; <code>animated={false}</code>
+or the theme&#x27;s <code>animation.enabled=false</code> retains static dots. Each animated dot
+owns one repeating native tween, cancelled and destroyed when stopped or unmounted.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="performance-and-responsive-guidance">Performance and responsive guidance<a href="#performance-and-responsive-guidance" class="hash-link" aria-label="Direct link to Performance and responsive guidance" title="Direct link to Performance and responsive guidance" translate="no">​</a></h2>
 <p>See the feedback examples and ownership notes below when adding notifications
 or modal windows.</p>
 <ul>
 <li class="">No polling or frame loops are created. Primitive GUI events remain React-owned;
 interaction/data/feedback transitions create short native tweens on changes.
+Loading uses three native repeating tweens only while its animation is enabled.</li>
+<li class="">Button hover scales are capped to <code>spacing.sm</code> total screen-pixel growth on the
+longest axis. This preserves compact-button feedback without excessive growth
+on full-width buttons. Scroll containers must reserve padding, scrollbar space,
+outlines and shadows; the Storybook and CartoonScrollBox do so explicitly.
 Toast timers belong to Core&#x27;s existing queue. Adapter and viewport Signal
 subscriptions are Cleanup-owned.</li>
 <li class="">Cleanup cancels/destroys replaced or unmounted tweens and disconnects completion

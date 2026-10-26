@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkroframe_monorepo=self.webpackChunkroframe_monorepo||[]).push([[9647],{7121(e,r,o){o.r(r),o.d(r,{default:()=>t});o(6540);var s=o(4164),a=o(7559),n=o(5500),u=o(2831),c=o(1656),p=o(4848);function t(e){return(0,p.jsx)(n.e3,{className:(0,s.A)(a.G.wrapper.docsPages),children:(0,p.jsx)(c.A,{children:(0,u.v)(e.route.routes)})})}}}]);
